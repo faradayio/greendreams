@@ -1,0 +1,94 @@
+body {
+  background: black;
+}
+
+p, h1, h2, h3, h4 {
+  margin: 0;
+}
+
+header {
+  background-color: #17300c;
+  background-image: url(images/trees.png), url(images/header.png);
+  background-position: 19em 100%, 0 0;
+  background-repeat: no-repeat, repeat;
+  padding: 20px 40px; 
+  border-bottom: 1px solid #324a27;
+}
+
+header h1 {
+  font-family: "Abril Fatface";
+  font-weight: 400;
+  word-spacing: -.2em;
+  text-transform: lowercase;
+  color: #e1f4d8;
+  font-size: 48px;
+  margin: 0;
+  text-shadow: 0 2px 0 black;
+}
+
+header h2 {
+  margin: 0;
+  color: #718866;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  padding: 0 0 0 30px;
+  position: relative;
+  top: -10px;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+}
+
+article {
+  padding: 20px 0;
+  background: #050e02;
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 24px;
+  position: relative;
+}
+
+article p {
+  color: #c1dcb4;
+  margin: 20px 40px;
+  text-shadow: 0 1px 0 black;
+}
+
+article ul {
+  list-style: none;
+}
+
+article ul li {
+  margin: 0 0 20px;
+  width: 450px;
+}
+
+article ul li a {
+  color: white !important;
+  text-decoration: none;
+  background: red;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+  display: block;
+  padding: 5px 50px 5px 5px;
+}
+
+article ul li a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.docs {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.details {
+  height: 200px;
+  margin: 0 0 0 490px;
+}
+
+footer {
+  height: 350px;
+  background: black; url(images/footer.png) no-repeat 100% 0;
+}

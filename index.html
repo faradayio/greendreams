@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <title>greendreams - write code, save the planet</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/html5.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/application.css" />
+    <link href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic|Abril+Fatface|Open+Sans:300" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js"></script>
+    <!-- FIXME add google analytics -->
+  </head>
+  <body>
+    <header>
+      <h1>Green Dreams</h1>
+      <h2>APIs for saving the planet</h2>
+    </header>
+    <article>
+      <p class="intro">As a green developer, I want to&hellip;</p>
+      <ul>
+        <li>
+          <a href="#">Calculate the environmental impact of an activity or thing</a>
+          <div class="docs">
+            <div class="details">
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="#">Look up the environmental impact of a specific raw material</a>
+          <div class="docs">
+            <div class="details">
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="#">Retrieve the price of electricity</a>
+          <div class="docs">
+            <div class="details">
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="#">Control a residential appliance</a>
+          <div class="docs">
+            <div class="details">
+            </div>
+          </div>
+        </li>
+      </ul>
+      <p class="rationale">&hellip;so that I can save the planet</p>
+      <div id="details"><div id="inner"></div></div>
+    </article>
+    <footer>
+    </footer>
+    <script type="text/javascript">
+      document.observe('dom:loaded', function() {
+          $$('.docs').invoke('hide');
+          $$('article ul li').each(function(el) {
+              var hue = Math.floor(Math.random() * 360);
+              el.down('a').setStyle({backgroundColor: 'hsl(' + hue + ',100%,40%)'});
+              el.down('.details').setStyle({backgroundColor: 'hsl(' + hue + ',20%,10%'});
+              el.down('a').observe('click', function() {
+                  $$('.docs').invoke('hide');
+                  el.down('.docs').show();
+                  return false;
+              });
+          });
+      });
+    </script>
+  </body>
+</html>
