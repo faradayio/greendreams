@@ -1,31 +1,3 @@
-document.observe('never', function() {
-    $$('.docs').invoke('hide');
-    var apis = [];
-    $$('#apis>li').each(function(el) {
-      apis.push(el.remove());
-    });
-    apis.shuffle();
-    apis.each(function(el) {
-      $('apis').insert(el);
-    });
-    $$('article>ul>li').each(function(el) {
-        var hue = Math.floor(Math.random() * 360);
-        el.down('a').setStyle({backgroundColor: 'hsl(' + hue + ',100%,40%)'});
-        el.down('.details').setStyle({backgroundColor: 'hsl(' + hue + ',20%,10%', borderBottomColor: 'hsl(' + hue + ',100%,40%)'});
-        if (el.down('.response')) el.down('.response').update(js_beautify(el.down('.response').innerHTML, { 'indent_size': 2 }));
-        el.down('a').observe('click', function(ev) {
-            var toggled = el.down('.docs').visible();
-            $$('.docs').each(function(el) {
-                if (el.visible()) el.slideUp();
-            });
-            if (!toggled) el.down('.docs').slideDown();
-            ev.stop();
-            return false;
-        });
-    });
-    sh_highlightDocument();
-});
-
 var greenDreams = {
   initialize: function() {
     console.log('initializing');
@@ -47,10 +19,10 @@ var greenDreams = {
   },
   drawApis: function() {
     console.log('drawing apis');
-    greenDreams.apis.each(function(kv) {
+    var order = greenDreams.apis.keys()
+    order.shuffle().each(function(k) {
       console.log('drawing api');
-      var k = kv[0];
-      var api = kv[1];
+      var api = greenDreams.apis.get(k);
       var li = new Element('li', { 'id': k});
       var hue = Math.floor(Math.random() * 360);
       //if (el.down('.response')) el.down('.response').update(js_beautify(el.down('.response').innerHTML, { 'indent_size': 2 }));
