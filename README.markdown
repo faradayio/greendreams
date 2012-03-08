@@ -53,6 +53,9 @@ genability:
   location: "http://api.genability.com/rest/public/prices/729"
   # Sample query parameters
   params: "appId=APIUSER&appKey=APIKEY&fromDateTime=2012-01-01T11:25:12.0-0700"
+  # Custom request headers if necessary
+  headers:
+    Accept: "text/javascript"
 ```
 
 ### Key security
@@ -71,4 +74,4 @@ We'd love to see the following sites added:
 
 * [Footprinted](http://footprinted.org) --- API key approval process
 * [Tendril](http://tendrilinc.com)
-* [AMEE](http://amee.com)
+* [AMEE](http://amee.com) -- currently needs HTTP basic auth

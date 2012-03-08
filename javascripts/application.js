@@ -124,10 +124,8 @@ var greenDreams = {
       var el = $(apiName);
       new Ajax.Request(api.location, {
           method: api.method,
+          requestHeaders: api.headers,
           parameters: greenDreams.keyedParams(api.params, api.apiKey, api.apiUser),
-          onCreate: function(request) { 
-              request.transport.setRequestHeader = Prototype.emptyFunction; 
-          },
           onLoading: function() {
             el.down('pre.response').addClassName('loading');
           },
