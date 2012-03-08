@@ -26,7 +26,7 @@ We've tried to make this as simple as possible.
 
 1. Submit a pull request
 
-## `apis.yml`
+## apis.yml
 
 Use this template to add your site:
 
