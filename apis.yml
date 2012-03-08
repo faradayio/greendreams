@@ -1,10 +1,21 @@
 cm1:
   name: Brighter Planet CM1
   action: Calculate the environmental impact of an activity or thing
-  api_site: http://impact.brighterplanet.com
-  documentation: http://impact.brighterplanet.com/documentation
-  key_registration: http://keys.brighterplanet.com
-  api_key: 905ad651476b48dc476030a64748c6f8
+  apiSite: "http://impact.brighterplanet.com"
+  documentation: "http://impact.brighterplanet.com/documentation"
+  keyRegistration: "http://keys.brighterplanet.com"
+  apiKey: 905ad651476b48dc476030a64748c6f8
   method: post
-  location: http://impact.brighterplanet.com/flights.json
-  params: origin_airport=jfk&amp;destination_airport=lax&amp;key=APIKEY
+  location: "http://impact.brighterplanet.com/flights.json"
+  params: "origin_airport=jfk&destination_airport=lax&key=APIKEY"
+genability:
+  name: Genability
+  action: Retrieve the price of electricity in a given region
+  apiSite: "https://developer.genability.com"
+  documentation: "https://developer.genability.com/documentation"
+  keyRegistration: "https://developer.genability.com/signup"
+  apiKey: 05ba9810964c37387e30fd53b23a57da
+  apiUser: ca793a98
+  method: get
+  location: "http://api.genability.com/rest/public/prices/729"
+  params: "appId=APIUSER&appKey=APIKEY&fromDateTime=2012-01-01T11:25:12.0-0700"

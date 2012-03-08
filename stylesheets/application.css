@@ -161,7 +161,7 @@ article>ul>li>a:hover {
   background: rgba(0,0,0,0.5);
   border-radius: 5px;
   padding: 10px;
-  max-height: 200px;
+  height: 200px;
   overflow: auto;
   margin: 0;
   color: #eee;
