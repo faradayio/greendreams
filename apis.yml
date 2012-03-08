@@ -1,0 +1,10 @@
+cm1:
+  name: Brighter Planet CM1
+  action: Calculate the environmental impact of an activity or thing
+  api_site: http://impact.brighterplanet.com
+  documentation: http://impact.brighterplanet.com/documentation
+  key_registration: http://keys.brighterplanet.com
+  api_key: 905ad651476b48dc476030a64748c6f8
+  method: post
+  location: http://impact.brighterplanet.com/flights.json
+  params: origin_airport=jfk&amp;destination_airport=lax&amp;key=APIKEY

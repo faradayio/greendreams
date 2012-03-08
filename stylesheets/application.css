@@ -47,45 +47,129 @@ article {
   position: relative;
 }
 
+article h1 {
+  display: none;
+}
+
 article p {
   color: #c1dcb4;
   margin: 20px 40px;
   text-shadow: 0 1px 0 black;
 }
 
-article ul {
+article>ul {
   list-style: none;
+  padding: 0 40px;
 }
 
-article ul li {
+article>ul>li {
   margin: 0 0 20px;
-  width: 450px;
 }
 
-article ul li a {
+article>ul>li>a {
   color: white !important;
   text-decoration: none;
   background: red;
   text-shadow: 0 1px 0 rgba(0,0,0,0.3);
   display: block;
-  padding: 5px 50px 5px 5px;
+  padding: 5px 10px;
 }
 
-article ul li a:hover {
+article>ul>li>a:hover {
   color: white;
   text-decoration: underline;
 }
 
-.docs {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
+.details {
+  padding: 10px;
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+  background-image: url(images/sidebar.png);
+  background-position: 100% 0;
+  background-repeat: repeat-y;
 }
 
-.details {
-  height: 200px;
-  margin: 0 0 0 490px;
+.details .meta {
+  float: right;
+  width: 230px;
+  padding: 0 0 10px;
+}
+
+.details .meta h2 {
+  font-size: 24px;
+  font-weight: normal;
+  color: white;
+}
+
+.details .meta h2:before {
+  content: "Use";
+  display: block;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
+.details .meta ul {
+  list-style: square;
+  color: #aaa;
+  font-size: 16px;
+  padding: 0 0 0 1em;
+}
+
+.details .meta ul a {
+  color: #ccc;
+}
+
+.details h3 {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: normal;
+  margin: 0 0 5px 10px;
+  color: #aaa;
+}
+
+.details dl.request {
+  background: rgba(0,0,0,0.5);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0 0 20px;
+}
+
+.details dl.request dt {
+  display: none;
+}
+
+.details dl.request dd {
+  margin: 0;
+  color: #eee;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+}
+
+.details dl.request dd.method {
+  width: 3em;
+  float: left;
+  text-transform: uppercase;
+  color: yellow;
+}
+
+.details dl.request dd.location, .details dl.request dd.params {
+  margin: 0 0 0 4em;
+}
+
+.details pre.response {
+  background: rgba(0,0,0,0.5);
+  border-radius: 5px;
+  padding: 10px;
+  max-height: 200px;
+  overflow: auto;
+  margin: 0;
+  color: #eee;
+  font-size: 15px;
+}
+
+.details h3, .details dl.request, .details pre.response {
+  margin-right: 250px;
 }
 
 footer {

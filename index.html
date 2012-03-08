@@ -3,9 +3,15 @@
   <head>
     <title>greendreams - write code, save the planet</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/html5.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/whatis.css" />
     <link rel="stylesheet" type="text/css" href="stylesheets/application.css" />
     <link href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic|Abril+Fatface|Open+Sans:300" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/scriptaculous.js"></script>
+    <script type="text/javascript" src="javascripts/beautify.js"></script>
+    <script type="text/javascript" src="javascripts/sh_main.min.js"></script>
+    <script type="text/javascript" src="javascripts/sh_javascript.min.js"></script>
+    <script type="text/javascript" src="javascripts/js-yaml.min.js"></script>
     <!-- FIXME add google analytics -->
   </head>
   <body>
@@ -15,11 +21,33 @@
     </header>
     <article>
       <p class="intro">As a green developer, I want to&hellip;</p>
-      <ul>
+      <h1>APIs</h1>
+      <ul id="apis">
         <li>
           <a href="#">Calculate the environmental impact of an activity or thing</a>
           <div class="docs">
             <div class="details">
+              <div class="meta">
+                <h2>Brighter Planet CM1</h2>
+                <ul>
+                  <li><a href="http://impact.brighterplanet.com">API site</a></li>
+                  <li><a href="http://impact.brighterplanet.com/documentation">Documentation</a></li>
+                  <li><a href="http://keys.brighterplanet.com">API key registration</a></li>
+                </ul>
+              </div>
+              <div class="cycle">
+                <h3>Request</h3>
+                <dl class="request">
+                  <dt>Method</dt>
+                  <dd class="method">post</dd>
+                  <dt>Location</dt>
+                  <dd class="location">http://impact.brighterplanet.com/flights.json</dd>
+                  <dt>Params</dt>
+                  <dd class="params">origin_airport=jfk&amp;destination_airport=lax&amp;key=APIKEY</dd>
+                </dl>
+                <h3>Response</h3>
+                <pre class="response sh_javascript">{"compliance":[],"decisions":{"carbon":{"description":"1689.4 kg","object":{"value":1689.4387768092781,"units":"kilograms"},"methodology":"from fuel use and greenhouse gas emission factor"},"ghg_emission_factor":{"description":"5.15214","object":5.15214,"methodology":"from fuel and aviation multiplier"},"aviation_multiplier":{"description":"2.0","object":2.0,"methodology":"default"},"energy":{"description":"12338.2 MJ","object":{"value":12338.175209402241,"units":"megajoules"},"methodology":"from fuel use and fuel"},"fuel_use":{"description":"327.9101066371019","object":327.9101066371019,"methodology":"from fuel per segment, segments per trip, trips, freight_share, passengers, seat class multiplier, fuel, date, and timeframe"},"fuel_per_segment":{"description":"13041.228702937942","object":13041.228702937942,"methodology":"from adjusted distance per segment and fuel use coefficients"},"seat_class_multiplier":{"description":"1.0","object":1.0,"methodology":"default"},"distance_class":{"description":"short haul","object":{"flight_distance_class":{"distance":1108.0,"distance_units":"kilometres","max_distance":3700.0,"max_distance_units":"kilometres","min_distance":0.0,"min_distance_units":"kilometres","name":"short haul"}},"methodology":"from adjusted distance per segment"},"adjusted_distance_per_segment":{"description":"1592.1172519740146","object":1592.1172519740146,"methodology":"from adjusted distance and segments per trip"},"adjusted_distance":{"description":"2674.7569833163443","object":2674.7569833163443,"methodology":"from distance, route inefficiency factor, and dogleg factor"},"distance":{"description":"2147.8390968736453","object":2147.8390968736453,"methodology":"from airports"},"route_inefficiency_factor":{"description":"1.07","object":1.07,"methodology":"from country"},"dogleg_factor":{"description":"1.1638548181950328","object":1.1638548181950328,"methodology":"from segments per trip"},"fuel_use_coefficients":{"description":"BrighterPlanet::Flight::ImpactModel::FuelUseEquation::Given","object":{"m3":1.069359608075609e-07,"m2":-0.00015849964979117016,"m1":7.139499169333774,"b":1644.5120484915844},"methodology":"default"},"fuel":{"description":"Jet Fuel","object":{"fuel":{"biogenic_fraction":0.0,"carbon_content":18.672,"carbon_content_units":"grams_per_megajoule","co2_biogenic_emission_factor":0.0,"co2_biogenic_emission_factor_units":"kilograms_per_litre","co2_emission_factor":2.57607,"co2_emission_factor_units":"kilograms_per_litre","density":0.8156,"density_units":"kilograms_per_litre","energy_content":37.6267,"energy_content_units":"megajoules_per_litre","name":"Jet Fuel","oxidation_factor":1.0,"physical_units":null}},"methodology":"default"},"passengers":{"description":"130","object":130,"methodology":"from seats and load factor"},"seats":{"description":"167.8303643238275","object":167.8303643238275,"methodology":"default"},"load_factor":{"description":"0.7734122348583675","object":0.7734122348583675,"methodology":"default"},"freight_share":{"description":"0.0665336701213722","object":0.0665336701213722,"methodology":"default"},"trips":{"description":"1.7","object":1.7,"methodology":"default"},"country":{"description":"US","object":{"country":{"automobile_city_speed":32.0259,"automobile_city_speed_units":"kilometres_per_hour","automobile_fuel_efficiency":9.2669,"automobile_fuel_efficiency_units":"kilometres_per_litre","automobile_highway_speed":91.8935,"automobile_highway_speed_units":"kilometres_per_hour","automobile_trip_distance":16.3348,"automobile_trip_distance_units":"kilometres","automobile_urbanity":0.43,"cooling_degree_days":882.0,"cooling_degree_days_units":"degrees_celsius","electricity_emission_factor":0.589455,"electricity_emission_factor_units":"kilograms_co2e_per_kilowatt_hour","electricity_loss_factor":0.0615633,"flight_route_inefficiency_factor":1.07,"heating_degree_days":2159.0,"heating_degree_days_units":"degrees_celsius","iso_3166_alpha_3_code":"USA","iso_3166_code":"US","iso_3166_numeric_code":840,"lodging_district_heat_intensity":1.73952,"lodging_district_heat_intensity_units":"megajoules_per_room_night","lodging_electricity_intensity":33.3145,"lodging_electricity_intensity_units":"kilowatt_hours_per_room_night","lodging_fuel_oil_intensity":0.411674,"lodging_fuel_oil_intensity_units":"gallons_per_room_night","lodging_natural_gas_intensity":1.96714,"lodging_natural_gas_intensity_units":"cubic_metres_per_room_night","lodging_occupancy_rate":0.601,"name":"United States","rail_passengers":4467000000.0,"rail_speed":32.4972,"rail_speed_units":"kilometres_per_hour","rail_trip_co2_emission_factor":0.0957617,"rail_trip_co2_emission_factor_units":"kilograms_per_passenger_kilometre","rail_trip_diesel_intensity":0.0194247,"rail_trip_diesel_intensity_units":"litres_per_passenger_kilometre","rail_trip_distance":12.9952,"rail_trip_distance_units":"kilometres","rail_trip_electricity_intensity":0.140512,"rail_trip_electricity_intensity_units":"kilowatt_hours_per_passenger_kilometre"}},"methodology":"from origin airport and destination airport"},"segments_per_trip":{"description":"1.68","object":1.68,"methodology":"default"},"date":{"description":"2012-01-01","object":"2012-01-01","methodology":"from timeframe"}},"emitter":"Flight","equivalents":{"cars_off_the_road_for_a_year":0.3074778573792886,"cars_off_the_road_for_a_month":3.686355410997845,"cars_off_the_road_for_a_week":15.973643634731724,"cars_off_the_road_for_a_day":112.12129386172454,"cars_to_priuses_for_a_year":0.6149557147585772,"cars_to_priuses_for_a_month":7.37271082199569,"cars_to_priuses_for_a_week":31.947287269463448,"cars_to_priuses_for_a_day":224.24258772344908,"one_way_domestic_flight":5.490676024630154,"round_trip_domestic_flight":2.745338012315077,"one_way_cross_country_flight":1.9293390831161956,"round_trip_cross_country_flight":0.9646695415580978,"vegan_meals_instead_of_non_vegan_ones":1359.4694209943277,"days_of_veganism":453.15647366477583,"weeks_of_veganism":64.73591504977792,"months_of_veganism":15.105272103451755,"years_of_veganism":1.2417375009548193,"barrels_of_petroleum":3.929634594858381,"canisters_of_bbq_propane":70.3938455133122,"railroad_cars_full_of_coal":0.008447193884046392,"homes_energy_in_a_year":0.16387556135049997,"homes_energy_in_a_month":1.9580595423219536,"homes_energy_in_a_week":8.482672098359386,"homes_energy_in_a_day":59.54764856619663,"homes_electricity_in_a_year":0.24834750019096388,"homes_electricity_in_a_month":2.9717228084075202,"homes_electricity_in_a_week":12.876902356840318,"homes_electricity_in_a_day":90.38328512051957,"homes_with_lowered_thermostat_2_degrees_for_a_winter":8.867864139471902,"homes_with_raised_thermostat_3_degrees_for_a_summer":3.9870755132698967,"replaced_refrigerators":1.7012648482469432,"loads_of_cold_laundry":774.7124243712162,"lightbulbs_for_a_year":3.1187039819899276,"lightbulbs_for_a_month":37.95324212102043,"lightbulbs_for_a_week":162.65578655364368,"lightbulbs_for_a_day":1138.5955741918362,"lightbulbs_for_an_evening":6831.575134589793,"lightbulbs_to_CFLs_for_a_day":19380.35638163699,"lightbulbs_to_CFLs_for_a_week":2768.621857537062,"lightbulbs_to_CFLs_for_a_month":646.0126677926621,"lightbulbs_to_CFLs_for_a_year":53.0973713163388,"days_with_lightbulbs_to_CFLs":430.6751118617748,"weeks_with_lightbulbs_to_CFLs":61.52429193506348,"months_with_lightbulbs_to_CFLs":14.355161286548435,"years_with_lightbulbs_to_CFLs":1.1792282662128761,"recycled_kgs_of_trash":1165.1298996204027,"recycled_bags_of_trash":645.5936869760135},"methodology":"http://impact.brighterplanet.com/flights?destination_airport=lax&origin_airport=jfk","scope":"The flight greenhouse gas emission is the anthropogenic greenhouse gas emissions attributed to a single passenger on this flight. It includes CO2 emissions from combustion of non-biogenic fuel and extra forcing effects of high-altitude fuel combustion.","timeframe":{"startDate":"2012-01-01","endDate":"2013-01-01"},"characteristics":{"origin_airport":{"description":"JFK","object":{"airport":{"city":"New York","country_iso_3166_code":"US","country_name":"United States","iata_code":"JFK","latitude":40.6398,"longitude":-73.7789,"name":"John F Kennedy International"}}},"destination_airport":{"description":"LAX","object":{"airport":{"city":"Los Angeles","country_iso_3166_code":"US","country_name":"United States","iata_code":"LAX","latitude":33.9425,"longitude":-118.408,"name":"Los Angeles International"}}}},"errors":[]}</pre>
+              </div>
             </div>
           </div>
         </li>
@@ -31,9 +59,30 @@
           </div>
         </li>
         <li>
-          <a href="#">Retrieve the price of electricity</a>
+          <a href="#">Retrieve the price of electricity in a given region</a>
           <div class="docs">
             <div class="details">
+              <div class="meta">
+                <h2>Genability</h2>
+                <ul>
+                  <li><a href="https://developer.genability.com/">API site</a></li>
+                  <li><a href="https://developer.genability.com/documentation">Documentation</a></li>
+                  <li><a href="https://developer.genability.com/signup">API key registration</a></li>
+                </ul>
+              </div>
+              <div class="cycle">
+                <h3>Request</h3>
+                <dl class="request">
+                  <dt>Method</dt>
+                  <dd class="method">get</dd>
+                  <dt>Location</dt>
+                  <dd class="location">http://api.genability.com/rest/public/prices/729</dd>
+                  <dt>Params</dt>
+                  <dd class="params">appId=APIUSER&amp;appKey=APIKEY&amp;fromDateTime=2011-06-29T11:25:12.0-0700</dd>
+                </dl>
+                <h3>Response</h3>
+                <pre class="response sh_javascript">{"status":"success","count":3,"type":"TariffRateSummary","results":[{"tariffId":729,"chargeType":"MINIMUM","quantityKey":null,"fromDateTime":"2011-06-29T13:25:12.000-05:00","toDateTime":"2011-07-06T13:25:12.000-05:00","rateAmount":7.600000,"relativePriceIndex":1.00,"currency":"USD","priceChanges":[],"name":"MINIMUM rate change"},{"tariffId":729,"chargeType":"FIXED_PRICE","quantityKey":null,"fromDateTime":"2011-06-29T13:25:12.000-05:00","toDateTime":"2011-07-06T13:25:12.000-05:00","rateAmount":0.250000,"relativePriceIndex":1.00,"currency":"USD","priceChanges":[],"name":"FIXED_PRICE rate change"},{"tariffId":729,"chargeType":"CONSUMPTION_BASED","quantityKey":"consumption","fromDateTime":"2011-06-29T13:25:12.000-05:00","toDateTime":"2011-07-06T13:25:12.000-05:00","rateAmount":0.129730,"relativePriceIndex":1.00,"currency":"USD","priceChanges":[],"name":"CONSUMPTION_BASED rate change"}]}</pre>
+              </div>
             </div>
           </div>
         </li>
@@ -49,20 +98,45 @@
       <div id="details"><div id="inner"></div></div>
     </article>
     <footer>
+    <a href="http://github.com/brighterplanet/greendreams"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a>
     </footer>
     <script type="text/javascript">
+      Array.prototype.shuffle = function (){
+        var i = this.length, j, temp;
+        if ( i == 0 ) return;
+        while ( --i ) {
+          j = Math.floor( Math.random() * ( i + 1 ) );
+          temp = this[i];
+          this[i] = this[j];
+          this[j] = temp;
+        }
+      };
       document.observe('dom:loaded', function() {
           $$('.docs').invoke('hide');
-          $$('article ul li').each(function(el) {
+          var apis = [];
+          $$('#apis>li').each(function(el) {
+            apis.push(el.remove());
+          });
+          apis.shuffle();
+          apis.each(function(el) {
+            $('apis').insert(el);
+          });
+          $$('article>ul>li').each(function(el) {
               var hue = Math.floor(Math.random() * 360);
               el.down('a').setStyle({backgroundColor: 'hsl(' + hue + ',100%,40%)'});
-              el.down('.details').setStyle({backgroundColor: 'hsl(' + hue + ',20%,10%'});
-              el.down('a').observe('click', function() {
-                  $$('.docs').invoke('hide');
-                  el.down('.docs').show();
+              el.down('.details').setStyle({backgroundColor: 'hsl(' + hue + ',20%,10%', borderBottomColor: 'hsl(' + hue + ',100%,40%)'});
+              if (el.down('.response')) el.down('.response').update(js_beautify(el.down('.response').innerHTML, { 'indent_size': 2 }));
+              el.down('a').observe('click', function(ev) {
+                  var toggled = el.down('.docs').visible();
+                  $$('.docs').each(function(el) {
+                      if (el.visible()) el.slideUp();
+                  });
+                  if (!toggled) el.down('.docs').slideDown();
+                  ev.stop();
                   return false;
               });
           });
+          sh_highlightDocument();
       });
     </script>
   </body>
