@@ -34,6 +34,7 @@ var greenDreams = {
   fetchApis: function() {
     console.log('fetching apis');
     new Ajax.Request('apis.yml', {
+       method: 'get',
        onSuccess: function(response) {
           greenDreams.loadApis(response);
           greenDreams.drawApis();
