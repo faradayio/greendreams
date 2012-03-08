@@ -173,6 +173,16 @@ article>ul>li>a:hover {
 }
 
 footer {
-  height: 350px;
+  height: 200px;
   background: black; url(images/footer.png) no-repeat 100% 0;
+  color: #aaa;
+  font-size: 15px;
+  padding: 40px;
+  text-shadow: 0 1px 0 black;
+  font-family: "Open Sans";
+  font-weight: 300;
+}
+
+footer p a, footer p a:visited {
+  color: #e1f4d8; 
 }
