@@ -110,7 +110,7 @@ var greenDreams = {
       cycle.insert(dl);
       h3 = new Element('h3').update('Response');
       cycle.insert(h3);
-      var pre = new Element('pre', { 'class': 'response sh_javascript' }).update('TODO');
+      var pre = new Element('pre', { 'class': 'response sh_javascript' }).update('Loading . . .');
       cycle.insert(pre);
       details.insert(cycle);
       docs.insert(details);
