@@ -68,7 +68,7 @@ If anybody has any suggestions on how to handle this differently, please get in 
 
 ## Dreamers
 
-This project was created by [Brighter Planet](http://brighterplanet.com) with generous help from (your wonderful name here).
+This project was created by [Brighter Planet](http://brighterplanet.com) with generous help from [Genability](http://genability.com) and [our fabulous dreamers](https://github.com/brighterplanet/greendreams/contributors).
 
 ### Wishlist
 
