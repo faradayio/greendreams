@@ -14,7 +14,7 @@ Yes, there are a few:
 
 1. **Free non-commercial use.** Volume limitations are fine.
 
-1. **Client-side query support.** CORS or JSONP.
+1. **Client-side query support.** CORS or JSONP. (Check for CORS support with the form at the bottom of [this site](http://enable-cors.org/).)
 
 ## Add an API
 
