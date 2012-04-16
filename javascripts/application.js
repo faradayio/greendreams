@@ -25,7 +25,6 @@ var greenDreams = {
       var api = greenDreams.apis.get(k);
       var li = new Element('li', { 'id': k});
       var hue = Math.floor(Math.random() * 360);
-      //if (el.down('.response')) el.down('.response').update(js_beautify(el.down('.response').innerHTML, { 'indent_size': 2 }));
       var mainA = new Element('a', { 'href': '#' }).update(api.action);
       mainA.setStyle({backgroundColor: 'hsl(' + hue + ',100%,40%)'});
       mainA.observe('click', function(ev) {
