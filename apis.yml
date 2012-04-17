@@ -29,3 +29,13 @@ good_guide:
   method: get
   location: "http://api.goodguide.com/search.xml"
   params: "api_key=APIKEY&api_version=1.0&upc=024182002119&api_format=simple"
+pvwatts:
+  name: NREL PVWatts
+  action: Project the energy production and cost savings of a solar panel
+  apiSite: "http://developer.nrel.gov/doc/pvwatts"
+  documentaiton: "http://developer.nrel.gov/doc/api/georeserv/app/sam/pvwatts"
+  keyRegistration: "http://developer.nrel.gov/signup"
+  apiKey: bbe2f061d8c2d58f0d130e3df84194c1b301c469
+  method: get
+  location: "http://developer.nrel.gov/api/georeserv/app/sam/pvwatts.json"
+  params: "api_key=APIKEY&address=Boulder,+CO&system_size=4.0&derate=0.770&tilt=39.5&azimuth=170&timeframe=monthly"
