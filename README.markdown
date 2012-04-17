@@ -77,3 +77,4 @@ We'd love to see the following sites added:
 * [Footprinted](http://footprinted.org) --- API key approval process
 * [Tendril](http://tendrilinc.com)
 * [AMEE](http://amee.com) -- currently needs HTTP basic auth
+* [WattzOn](http://www.wattzon.com/api/function/get-utility-comparison) -- API key approval process
