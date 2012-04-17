@@ -19,3 +19,12 @@ genability:
   method: get
   location: "http://api.genability.com/rest/public/prices/729"
   params: "appId=APIUSER&appKey=APIKEY&fromDateTime=2012-01-01T11:25:12.0-0700"
+tendril:
+  name: Tendril
+  action: "Download your user's electricity usage data"
+  apiSite: "http://dev.tendrilinc.com/"
+  documentation: "http://dev.tendrilinc.com/docs/greenbutton"
+  keyRegistration: "http://dev.tendrilinc.com/register"
+  method: get
+  location: "https://dev.tendrilinc.com/connect/greenbutton"
+  params: "from=12/24/2011&to=12/31/2011&resolution=HOURLY&max-results=20"
