@@ -19,3 +19,13 @@ genability:
   method: get
   location: "http://api.genability.com/rest/public/prices/729"
   params: "appId=APIUSER&appKey=APIKEY&fromDateTime=2012-01-01T11:25:12.0-0700"
+good_guide:
+  name: GoodGuide
+  action: Find the environmental performance of a specific product by UPC code
+  apiSite: "http://developer.goodguide.com"
+  documentation: "http://developer.goodguide.com/docs"
+  keyRegistration: "http://developer.goodguide.com/member/register"
+  apiKey: x3sz84jhcp8qm6rdsgmd2h24
+  method: get
+  location: "http://api.goodguide.com/search.xml"
+  params: "api_key=APIKEY&api_version=1.0&upc=024182002119&api_format=simple"
