@@ -56,10 +56,12 @@ var greenDreams = {
       var docsLink = new Element('a', { 'href': api.documentation }).update('Documentation');
       docsLi.insert(docsLink);
       ul.insert(docsLi);
-      var keysLi = new Element('li');
-      var keysLink = new Element('a', { 'href': api.keyRegistration }).update('API key registration');
-      keysLi.insert(keysLink);
-      ul.insert(keysLi);
+      if (api.keyRegistration) {
+        var keysLi = new Element('li');
+        var keysLink = new Element('a', { 'href': api.keyRegistration }).update('API key registration');
+        keysLi.insert(keysLink);
+        ul.insert(keysLi);
+      }
       meta.insert(ul);
       details.insert(meta);
       var cycle = new Element('div', { 'class': 'cycle' });
@@ -74,10 +76,12 @@ var greenDreams = {
       dl.insert(locationDt);
       var locationDd = new Element('dd', { 'class': 'location' }).update(api.location);
       dl.insert(locationDd);
-      var paramsDt = new Element('dt').update('Params');
-      dl.insert(paramsDt);
-      var paramsDd = new Element('dd', { 'class': 'params' }).update(api.params.escapeHTML());
-      dl.insert(paramsDd);
+      if (api.params) {
+        var paramsDt = new Element('dt').update('Params');
+        dl.insert(paramsDt);
+        var paramsDd = new Element('dd', { 'class': 'params' }).update(api.params.escapeHTML());
+        dl.insert(paramsDd);
+      }
       cycle.insert(dl);
       h3 = new Element('h3').update('Response');
       cycle.insert(h3);

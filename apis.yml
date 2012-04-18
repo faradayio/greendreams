@@ -29,3 +29,10 @@ good_guide:
   method: get
   location: "http://api.goodguide.com/search.xml"
   params: "api_key=APIKEY&api_version=1.0&upc=024182002119&api_format=simple"
+envirofacts:
+  name: Envirofacts
+  action: List toxic releases in a certain zip code
+  apiSite: "http://www.epa.gov/enviro/index.html"
+  documentation: "http://www.epa.gov/enviro/facts/ef_restful.html"
+  method: get
+  location: "http://iaspub.epa.gov/enviro/efservice/tri_facility/zip_code/11211/tri_reporting_form/rows/1:10/xml"
