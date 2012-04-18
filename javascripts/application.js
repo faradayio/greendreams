@@ -63,6 +63,10 @@ var greenDreams = {
         ul.insert(keysLi);
       }
       meta.insert(ul);
+      var discuss = new Element('p', { 'class': 'discuss' });
+      var discussLink = new Element('a', { 'href': 'https://github.com/brighterplanet/greendreams/wiki/' + k }).update('Discuss this API');
+      discuss.insert(discussLink);
+      meta.insert(discuss);
       details.insert(meta);
       var cycle = new Element('div', { 'class': 'cycle' });
       var h3 = new Element('h3').update('Request');

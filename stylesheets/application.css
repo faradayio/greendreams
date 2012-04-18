@@ -120,6 +120,29 @@ article>ul>li>a:hover {
   color: #ccc;
 }
 
+.details .meta p.discuss {
+  margin: 0;
+  text-shadow: none;
+  padding: 0 0 2px;
+}
+
+.details .meta p.discuss a {
+  text-decoration: none;
+  background: #222;
+  display: block;
+  padding: 5px 8px;
+  font-size: 16px;
+  color: #aaa;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 12px;
+  float: left;
+  border: 1px solid #555;
+  -moz-box-shadow: 0 2px 1px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0 2px 1px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 1px rgba(0,0,0,0.3);
+}
+
 .details h3 {
   font-size: 13px;
   text-transform: uppercase;
