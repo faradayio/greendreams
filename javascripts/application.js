@@ -1,10 +1,10 @@
 var greenDreams = {
   initialize: function() {
-    console.log('initializing');
+    greenDreams.log('initializing');
     greenDreams.fetchApis();
   },
   fetchApis: function() {
-    console.log('fetching apis');
+    greenDreams.log('fetching apis');
     new Ajax.Request('apis.yml', {
        method: 'get',
        onSuccess: function(response) {
@@ -14,14 +14,14 @@ var greenDreams = {
     });
   },
   loadApis: function(response) {
-    console.log(response.responseText);
+    greenDreams.log(response.responseText);
     greenDreams.apis = $H(jsyaml.load(response.responseText));
   },
   drawApis: function() {
-    console.log('drawing apis');
+    greenDreams.log('drawing apis');
     var order = greenDreams.apis.keys()
     order.shuffle().each(function(k) {
-      console.log('drawing api');
+      greenDreams.log('drawing api');
       var api = greenDreams.apis.get(k);
       var li = new Element('li', { 'id': k});
       var hue = Math.floor(Math.random() * 360);
@@ -121,7 +121,7 @@ var greenDreams = {
     }
   },
   keyedParams: function(params, apiKey, apiUser) {
-    console.log ('keying params ' + params + ' with [' + apiKey + '] and [' + apiUser + ']');
+    greenDreams.log('keying params ' + params + ' with [' + apiKey + '] and [' + apiUser + ']');
     if (apiKey) params = params.gsub('APIKEY', apiKey)
     if (apiUser) params = params.gsub('APIUSER', apiUser)
     return params;
@@ -143,6 +143,9 @@ var greenDreams = {
     } else {
       return '';
     }
+  },
+  log: function(message) {
+    if (window.location.protocol == 'file:') console.log(message);
   }
 }
 
