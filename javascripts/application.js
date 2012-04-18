@@ -81,7 +81,7 @@ var greenDreams = {
       cycle.insert(dl);
       h3 = new Element('h3').update('Response');
       cycle.insert(h3);
-      var pre = new Element('pre', { 'class': 'response sh_javascript' }).update('Loading . . .');
+      var pre = new Element('pre', { 'class': 'response' }).update('Loading . . .');
       cycle.insert(pre);
       details.insert(cycle);
       docs.insert(details);
@@ -103,7 +103,8 @@ var greenDreams = {
             el.down('pre.response').addClassName('loading');
           },
           onSuccess: function(response) {
-            el.down('pre.response').update(js_beautify(response.responseText, { 'indent_size': 2 }));
+            el.down('pre.response').update(greenDreams.beautify(response.transport.responseText, response.getHeader('Content-Type')));
+            el.down('pre.response').addClassName(greenDreams.langClass(response.getHeader('Content-Type')));
             sh_highlightDocument();
             el.down('pre.response').removeClassName('loading');
             api.loaded = true;
@@ -120,6 +121,24 @@ var greenDreams = {
     if (apiKey) params = params.gsub('APIKEY', apiKey)
     if (apiUser) params = params.gsub('APIUSER', apiUser)
     return params;
+  },
+  beautify: function(source, responseType) {
+    if (responseType.include('json')) {
+      return vkbeautify.json(source);
+    } else if (responseType.include('xml')) {
+      return vkbeautify.xml(source).escapeHTML();
+    } else {
+      return source;
+    }
+  },
+  langClass: function(responseType) {
+    if (responseType.include('json')) {
+      return 'sh_javascript';
+    } else if (responseType.include('xml')) {
+      return 'sh_xml';
+    } else {
+      return '';
+    }
   }
 }
 
