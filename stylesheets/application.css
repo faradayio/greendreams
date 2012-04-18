@@ -157,6 +157,10 @@ article>ul>li>a:hover {
   margin: 0 0 0 4em;
 }
 
+.details dl.request dd.params {
+  word-wrap: break-word;
+}
+
 .details pre.response {
   background: rgba(0,0,0,0.5);
   border-radius: 5px;
