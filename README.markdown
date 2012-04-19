@@ -78,4 +78,3 @@ We'd love to see the following sites added:
 * [Tendril](http://tendrilinc.com)
 * [AMEE](http://amee.com) -- currently needs HTTP basic auth
 * [WattzOn](http://www.wattzon.com/api/function/get-utility-comparison) -- API key approval process
-* NREL's PVWatts -- CORS -- see [branch](https://github.com/brighterplanet/greendreams/tree/pvwatts)
