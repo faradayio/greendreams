@@ -74,7 +74,7 @@ This project was created by [Brighter Planet](http://brighterplanet.com) with ge
 
 We'd love to see the following sites added:
 
-* [Footprinted](http://footprinted.org) --- API key approval process
-* [Tendril](http://tendrilinc.com)
-* [AMEE](http://amee.com) -- currently needs HTTP basic auth
+* [Footprinted](http://footprinted.org) -- API key approval process
+* [Tendril](http://tendrilinc.com) -- dealing with OAuth in [branch](https://github.com/brighterplanet/greendreams/tree/tendril)
+* [AMEE](http://amee.com) -- waiting for CORS
 * [WattzOn](http://www.wattzon.com/api/function/get-utility-comparison) -- API key approval process
