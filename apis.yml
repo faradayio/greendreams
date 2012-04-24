@@ -46,3 +46,10 @@ pvwatts:
   method: get
   location: "http://developer.nrel.gov/api/georeserv/app/sam/pvwatts.json"
   params: "api_key=APIKEY&address=Boulder,+CO&system_size=4.0&derate=0.770&tilt=39.5&azimuth=170&timeframe=monthly"
+amee:
+  name: Ask AMEE
+  action: Work out environmental footprints by asking natural language
+  documentation: "http://ask.amee.com/api"
+  method: get
+  location: " http://ask.amee.com/answer.json"
+  params: "q=10kg+of+beef"
