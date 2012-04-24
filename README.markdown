@@ -68,7 +68,7 @@ If anybody has any suggestions on how to handle this differently, please get in 
 
 ## Dreamers
 
-This project was created by [Brighter Planet](http://brighterplanet.com) with generous help from [Genability](http://genability.com), [GoodGuide](http://goodguide.com), [NREL](http://nrel.gov), [EPA](http://epa.gov), and [our fabulous dreamers](https://github.com/brighterplanet/greendreams/contributors).
+This project was created by [Brighter Planet](http://brighterplanet.com) with generous help from [Genability](http://genability.com), [GoodGuide](http://goodguide.com), [NREL](http://nrel.gov), [EPA](http://epa.gov), [AMEE](http://amee.com), and [our fabulous dreamers](https://github.com/brighterplanet/greendreams/contributors).
 
 ### Wishlist
 
