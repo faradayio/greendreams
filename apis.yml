@@ -49,6 +49,7 @@ pvwatts:
 amee:
   name: Ask AMEE
   action: Work out environmental footprints using natural language
+  apiSite: "http://ask.amee.com/api"
   documentation: "http://ask.amee.com/api"
   method: get
   location: " http://ask.amee.com/answer.json"
